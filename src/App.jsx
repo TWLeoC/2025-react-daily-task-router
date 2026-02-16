@@ -10,15 +10,20 @@ const Login = () => {
   return <p>這是登入頁面</p>;
 };
 
-const Todo = () => {
+const Logout = () => {
   const navigate = useNavigate();
   const handleLogout = () => {
     navigate('/login')
   }
+  return(<>
+  <button type="button" onClick={handleLogout}>登出</button>
+  </>)
+}
 
+const Todo = () => {
   return (<>
     <p>這是 Todo 頁面</p>
-    <button type="button" onClick={handleLogout}>登出</button>
+    <Logout />
   </>)
 };
 
