@@ -34,6 +34,9 @@ const Home = () => {
 const Post = () => {
   return(<>
     <p>動態路由練習 Post頁面</p>
+    <NavLink to="/post/post123">
+      <p>Post ID測試頁面</p>
+    </NavLink>
     <Outlet />
   </>)
 }
@@ -41,6 +44,7 @@ const Post = () => {
 const PostIdCheck = () => {
   const params = useParams();
   return(<>
+    <p>Post ID回覆</p>
     <p>Post ID: {params.postId}</p>
   </>)
 }
